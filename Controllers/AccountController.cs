@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using project5.Models;
 using Microsoft.EntityFrameworkCore;
-using project5.Data;
 namespace project5.Controllers
 {
     public class AccountController : Controller

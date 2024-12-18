@@ -38,7 +38,7 @@
             width: 300px; 
         }
 
-        .form-control {
+        .nav-form-control {
             padding-left: 35px; 
             border-radius: 30px; 
 
@@ -79,16 +79,16 @@
         
       
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item"><a class="nav-link" href="/Home/Index?filter=all">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="/Home/Index?filter=movies">Movies</a></li>
-    <li class="nav-item"><a class="nav-link" href="/Home/Index?filter=animes">Animes</a></li>
-    <li class="nav-item"><a class="nav-link" href="/Home/Index?filter=series">Series</a></li>
+    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="all" >Home</a></li>
+    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="Movie">Movies</a></li>
+    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="Anime">Animes</a></li>
+    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="Series">Series</a></li>
 </ul>
 
        
         <form class="form-inline d-flex" action="/search" method="get">
             <div class="input-group">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="query">
+                <input class="nav-form-control" type="search" placeholder="Search" aria-label="Search" name="query">
                 <button class="btn btn-outline-secondary" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
@@ -121,7 +121,12 @@
         @RenderBody()
         
     </div>
- 
+    @RenderSection("scripts",false)
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
 </body>
 </html>
 

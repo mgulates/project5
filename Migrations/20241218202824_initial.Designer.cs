@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using project5.Models;
 
@@ -10,9 +11,11 @@ using project5.Models;
 namespace project5.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20241218202824_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.3");
@@ -644,12 +647,7 @@ namespace project5.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("contentID")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("ReviewId");
-
-                    b.HasIndex("contentID");
 
                     b.ToTable("Reviews");
 
@@ -660,8 +658,7 @@ namespace project5.Migrations
                             Rating = 5,
                             ReviewDescription = "Test description",
                             ReviewTitle = "Test title",
-                            ReviewerName = "Test",
-                            contentID = 1
+                            ReviewerName = "Test"
                         },
                         new
                         {
@@ -669,8 +666,7 @@ namespace project5.Migrations
                             Rating = 4,
                             ReviewDescription = "Test description1",
                             ReviewTitle = "Test title1",
-                            ReviewerName = "Test1",
-                            contentID = 1
+                            ReviewerName = "Test1"
                         },
                         new
                         {
@@ -678,8 +674,7 @@ namespace project5.Migrations
                             Rating = 3,
                             ReviewDescription = "Test description2",
                             ReviewTitle = "Test title2",
-                            ReviewerName = "Test2",
-                            contentID = 1
+                            ReviewerName = "Test2"
                         },
                         new
                         {
@@ -687,8 +682,7 @@ namespace project5.Migrations
                             Rating = 2,
                             ReviewDescription = "Test description3",
                             ReviewTitle = "Test title3",
-                            ReviewerName = "Test3",
-                            contentID = 1
+                            ReviewerName = "Test3"
                         });
                 });
 
@@ -711,22 +705,9 @@ namespace project5.Migrations
                     b.Navigation("Content");
                 });
 
-            modelBuilder.Entity("project5.Models.Review", b =>
-                {
-                    b.HasOne("project5.Data.Content", "Content")
-                        .WithMany("Reviews")
-                        .HasForeignKey("contentID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Content");
-                });
-
             modelBuilder.Entity("project5.Data.Content", b =>
                 {
                     b.Navigation("ContentCategories");
-
-                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("project5.Models.Category", b =>

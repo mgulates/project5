@@ -1,7 +1,6 @@
-
-using project5.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using project5.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
