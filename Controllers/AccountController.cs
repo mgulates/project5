@@ -1,50 +1,85 @@
 using Microsoft.AspNetCore.Mvc;
 using project5.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 namespace project5.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly DataContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
-        
-        public AccountController(DataContext context)
+
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
-            _context = context;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
-      
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
 
-     
+
         [HttpPost]
-        public async Task<IActionResult> Login(Login model)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LogIn(LogIn model)
         {
             if (ModelState.IsValid)
             {
-                // Veritabanında, girilen e-posta ve şifreyi kontrol ediyoruz.
-                var user = await _context.Users
-                    .FirstOrDefaultAsync(u => u.Email == model.UserMail && u.Password == model.Password);
-
-             
+                var user = await _userManager.FindByEmailAsync(model.Email);
                 if (user != null)
                 {
-                    
-                    return RedirectToAction("Index", "Home");
+                    var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
                 }
-                else
+
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            }
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SignUp(Account model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
+                var result = await _userManager.CreateAsync(user, model.Password);
+
+                if (result.Succeeded)
                 {
-                    
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    TempData["SignUpSuccess"] = "Account created successfully. Please log in.";
+                    return RedirectToAction("LogIn", "Account");
+                }
+
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 
-            
             return View(model);
         }
+        [HttpGet]
+        public async Task<IActionResult> LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            TempData["LogOutMessage"] = "You have been successfully logged out.";
+            return RedirectToAction("LogIn", "Account");
+        }
+
     }
 }

@@ -79,10 +79,10 @@
         
       
        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="all" >Home</a></li>
-    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="Movie">Movies</a></li>
-    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="Anime">Animes</a></li>
-    <li class="nav-item"><a class="nav-link" asp-action="Index" asp-route-filter="Series">Series</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Home" asp-route-filter="all" >Home</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Home" asp-route-filter="Movie">Movies</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Home" asp-route-filter="Anime">Animes</a></li>
+            <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Home" asp-route-filter="Series">Series</a></li>
 </ul>
 
        
@@ -96,35 +96,43 @@
         </form>
 
         
-        <ul class="navbar-nav ms-auto">
+         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                
-                @if (!User.Identity.IsAuthenticated)
+
+                @if (User.Identity != null && User.Identity.IsAuthenticated)
                 {
-                    <a class="nav-link login" href="/Account/Login">
-                        <i class="fas fa-sign-in-alt"></i> Login
-                    </a>
+                        <div class="d-flex align-items-center">
+                            <span class="navbar-text me-3 ">
+                                <i class="fas fa-user"></i> Hoşgeldin, @User.Identity.Name
+                            </span>
+                            <a class="nav-link-primary" style="text-decoration: none;" asp-controller="Account"
+                                asp-action="LogOut">
+                                Log Out
+                            </a>
+                        </div>
                 }
                 else
                 {
-                   
-                    <a class="nav-link" href="/User/Profile">
-                        <i class="fas fa-user"></i>
-                    </a>
+                        <a class="nav-link-primary login" style="text-decoration: none;" asp-action="LogIn"
+                            asp-controller="Account">
+                            <i class="fas fa-sign-in-alt"></i> Log In
+                        </a>
                 }
             </li>
         </ul>
     </nav>
 
-   
+
     <div class="container mt-4">
         @RenderBody()
-        
+
     </div>
-    @RenderSection("scripts",false)
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("scripts", required: false)
 
 
 </body>

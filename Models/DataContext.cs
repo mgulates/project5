@@ -1,14 +1,16 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using project5.Data;
 
 namespace project5.Models
 {
-    public class DataContext : DbContext
+    public class DataContext : IdentityDbContext<IdentityUser, IdentityRole, string>
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
-        }
+        }   
         public DbSet<Content> Content => Set<Content>();
 
         public DbSet<Account> Users => Set<Account>();

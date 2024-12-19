@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "LogOut";
+}
+
+<div class="container text-center">
+    <h2>You have successfully logged out!</h2>
+    <p>Redirecting you to the home page...</p>
+</div>
+<script>
+    setTimeout(function () {
+        window.location.href = '/Account/LogIn';  // Ana sayfaya yönlendir
+    }, 2000);  // 3 saniye sonra yönlendirecek
+</script>

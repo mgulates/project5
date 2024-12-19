@@ -1,5 +1,9 @@
+
+
+using project5.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Identity;
 using project5.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,9 +17,21 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(connectionString);
 });
 
-
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+    options =>
+    {
+        options.Password.RequireDigit = false;
+        options.Password.RequiredLength = 6;
+        options.Password.RequireNonAlphanumeric = false;
+        options.User.RequireUniqueEmail = true;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireLowercase = false;
+    }
+)
+.AddEntityFrameworkStores<DataContext>()
+.AddDefaultTokenProviders();
 var app = builder.Build();
-
+builder.Services.AddAuthorization();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -28,11 +44,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern:  "{controller=Home}/{action=Index}/{filter=all}");
+    pattern: "{controller=Home}/{action=Index}/{filter=all}");
 
 app.Run();
