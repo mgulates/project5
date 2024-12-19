@@ -1,6 +1,4 @@
-﻿using project5.Data;
-
-namespace project5.Models
+﻿namespace project5.Models
 {
     public class ContentCategory
     {

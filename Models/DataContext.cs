@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using project5.Data;
 
 namespace project5.Models
 {
@@ -187,77 +186,81 @@ namespace project5.Models
                 );
 
             modelBuilder.Entity<ContentCategory>().HasData(
-                // Content 1 ("The Shawshank Redemption") with Sci-Fi/Thriller category
-                new ContentCategory { Id = 1,ContentID = 7, CategoryID = 8 }, // Sci-Fi/Thriller
-                new ContentCategory { Id = 2, ContentID = 7, CategoryID = 7 }, // Sci-Fi/Thriller
+                
+                new ContentCategory { Id = 1,ContentID = 7, CategoryID = 1 }, 
+                new ContentCategory { Id = 2, ContentID = 7, CategoryID = 2 }, 
+                
+                new ContentCategory { Id = 3, ContentID = 21, CategoryID = 3 }, 
+                new ContentCategory { Id = 4, ContentID = 21, CategoryID = 8 }, 
+                
+                new ContentCategory { Id = 5, ContentID = 22, CategoryID = 9 }, 
+                new ContentCategory { Id = 6, ContentID = 22, CategoryID = 6 }, 
+                
+                new ContentCategory { Id = 7, ContentID = 23, CategoryID = 6 }, 
+                new ContentCategory {Id = 8, ContentID = 23, CategoryID = 10 }, 
+                
+                new ContentCategory {Id = 9, ContentID = 24, CategoryID = 7 }, 
+                new ContentCategory {Id = 10, ContentID = 24, CategoryID = 3 }, 
+              
+                new ContentCategory {Id = 11, ContentID = 25, CategoryID = 9 }, 
+                new ContentCategory {Id = 12, ContentID = 25, CategoryID = 6 }, 
+              
+                new ContentCategory {Id = 13, ContentID = 26, CategoryID = 6 }, 
+              
+                new ContentCategory {Id = 14, ContentID = 27, CategoryID = 5 }, 
+                new ContentCategory { Id = 15, ContentID = 27, CategoryID = 6 }, 
+                
+                new ContentCategory {Id = 16, ContentID = 28, CategoryID = 7 }, 
+                new ContentCategory {Id = 17, ContentID = 28, CategoryID = 8 }, 
+     
+                new ContentCategory {Id = 18, ContentID = 29, CategoryID = 7 }, 
+                new ContentCategory {Id = 19, ContentID = 29, CategoryID = 2 }, 
 
-                // Content 2 ("The Dark Knight") with Action/Thriller category
-                new ContentCategory { Id = 3, ContentID = 21, CategoryID = 3 }, // Action
-                new ContentCategory { Id = 4, ContentID = 21, CategoryID = 8 }, // Thriller
+                new ContentCategory {Id = 20, ContentID = 30, CategoryID = 2 }, 
+                new ContentCategory {Id = 21, ContentID = 30, CategoryID = 6 }, 
+              
+                new ContentCategory {Id = 22, ContentID = 31, CategoryID = 9 }, 
+                new ContentCategory {Id = 23, ContentID = 31, CategoryID = 6 }, 
 
-                // Content 3 ("The Godfather") with Crime/Drama category
-                new ContentCategory { Id = 5, ContentID = 22, CategoryID = 9 }, // Crime
-                new ContentCategory { Id = 6, ContentID = 22, CategoryID = 6 }, // Drama
+                new ContentCategory {Id = 24, ContentID = 32, CategoryID = 7 }, 
+                new ContentCategory {Id = 25, ContentID = 32, CategoryID = 12 },
+                
+                new ContentCategory {Id = 26, ContentID = 33, CategoryID = 11 },
+                new ContentCategory {Id = 27, ContentID = 33, CategoryID = 6 }, 
 
-                // Content 4 ("Forrest Gump") with Drama/Comedy category
-                new ContentCategory { Id = 7, ContentID = 23, CategoryID = 6 }, // Drama
-                new ContentCategory {Id = 8, ContentID = 23, CategoryID = 10 }, // Comedy
+                new ContentCategory {Id = 28, ContentID = 34, CategoryID = 7 }, 
+                new ContentCategory {Id = 29, ContentID = 34, CategoryID = 8 }, 
 
-                // Content 5 ("The Matrix") with Sci-Fi/Action category
-                new ContentCategory {Id = 9, ContentID = 24, CategoryID = 7 }, // Sci-Fi
-                new ContentCategory {Id = 10, ContentID = 24, CategoryID = 3 }, // Action
+                new ContentCategory {Id = 30, ContentID = 35, CategoryID = 1 }, 
+                new ContentCategory {Id = 31, ContentID = 35, CategoryID = 6 }, 
 
-                // Content 6 ("Pulp Fiction") with Crime/Drama category
-                new ContentCategory {Id = 11, ContentID = 25, CategoryID = 9 }, // Crime
-                new ContentCategory {Id = 12, ContentID = 25, CategoryID = 6 }, // Drama
+                new ContentCategory {Id = 32, ContentID = 36, CategoryID = 7 }, 
+                new ContentCategory {Id = 33, ContentID = 36, CategoryID = 3 }, 
 
-                // Content 7 ("Fight Club") with Drama category
-                new ContentCategory {Id = 13, ContentID = 26, CategoryID = 6 }, // Drama
+                new ContentCategory {Id = 34, ContentID = 37, CategoryID = 9 }, 
+                new ContentCategory {Id = 35, ContentID = 37, CategoryID = 6 },  
 
-                // Content 8 ("Schindler's List") with History/Drama category
-                new ContentCategory {Id = 14, ContentID = 27, CategoryID = 5 }, // History
-                new ContentCategory { Id = 15, ContentID = 27, CategoryID = 6 }, // Drama
+				new ContentCategory { Id = 36, ContentID = 1, CategoryID = 1 }, 
+				new ContentCategory { Id = 37, ContentID = 1, CategoryID = 2 },
 
-                // Content 9 ("Inception") with Sci-Fi/Thriller category
-                new ContentCategory {Id = 16, ContentID = 28, CategoryID = 7 }, // Sci-Fi
-                new ContentCategory {Id = 17, ContentID = 28, CategoryID = 8 }, // Thriller
+				new ContentCategory { Id = 38, ContentID = 2, CategoryID = 1 }, 
+				new ContentCategory { Id = 39, ContentID = 2, CategoryID = 2 },
 
-                // Content 10 ("Interstellar") with Sci-Fi/Adventure category
-                new ContentCategory {Id = 18, ContentID = 29, CategoryID = 7 }, // Sci-Fi
-                new ContentCategory {Id = 19, ContentID = 29, CategoryID = 2 }, // Adventure
+				new ContentCategory { Id = 40, ContentID = 3, CategoryID = 1 }, 
+				new ContentCategory { Id = 41, ContentID = 3, CategoryID = 3 },
 
-                // Content 11 ("The Revenant") with Adventure/Drama category
-                new ContentCategory {Id = 20, ContentID = 30, CategoryID = 2 }, // Adventure
-                new ContentCategory {Id = 21, ContentID = 30, CategoryID = 6 }, // Drama
+				new ContentCategory { Id = 42, ContentID = 4, CategoryID = 1 }, 
+				new ContentCategory { Id = 43, ContentID = 4, CategoryID = 4 },
 
-                // Content 12 ("Breaking Bad") with Crime/Drama category
-                new ContentCategory {Id = 22, ContentID = 31, CategoryID = 9 }, // Crime
-                new ContentCategory {Id = 23, ContentID = 31, CategoryID = 6 }, // Drama
+				new ContentCategory { Id = 44, ContentID = 5, CategoryID = 1 }, 
+				new ContentCategory { Id = 45, ContentID = 5, CategoryID = 2 },
 
-                // Content 13 ("Stranger Things") with Sci-Fi/Horror category
-                new ContentCategory {Id = 24, ContentID = 32, CategoryID = 7 }, // Sci-Fi
-                new ContentCategory {Id = 25, ContentID = 32, CategoryID = 12 }, // Horror
+				new ContentCategory { Id = 46, ContentID = 6, CategoryID = 5 }, 
+				new ContentCategory { Id = 47, ContentID = 6, CategoryID = 6 },
 
-                // Content 14 ("The Crown") with Biography/Drama category
-                new ContentCategory {Id = 26, ContentID = 33, CategoryID = 11 }, // Biography
-                new ContentCategory {Id = 27, ContentID = 33, CategoryID = 6 }, // Drama
-
-                // Content 15 ("Dark") with Sci-Fi/Thriller category
-                new ContentCategory {Id = 28, ContentID = 34, CategoryID = 7 }, // Sci-Fi
-                new ContentCategory {Id = 29, ContentID = 34, CategoryID = 8 }, // Thriller
-
-                // Content 16 ("Game of Thrones") with Fantasy/Drama category
-                new ContentCategory {Id = 30, ContentID = 35, CategoryID = 1 }, // Fantasy
-                new ContentCategory {Id = 31, ContentID = 35, CategoryID = 6 }, // Drama
-
-                // Content 17 ("The Mandalorian") with Sci-Fi/Action category
-                new ContentCategory {Id = 32, ContentID = 36, CategoryID = 7 }, // Sci-Fi
-                new ContentCategory {Id = 33, ContentID = 36, CategoryID = 3 }, // Action
-
-                // Content 18 ("Peaky Blinders") with Crime/Drama category
-                new ContentCategory {Id = 34, ContentID = 37, CategoryID = 9 }, // Crime
-                new ContentCategory {Id = 35, ContentID = 37, CategoryID = 6 }  // Drama
-            );
+				new ContentCategory { Id = 48, ContentID = 8, CategoryID = 8 }, 
+				new ContentCategory { Id = 49, ContentID = 8, CategoryID = 7 }
+			);
 
         }
     }

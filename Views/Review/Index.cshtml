@@ -6,6 +6,7 @@
     <thead>
         <tr class="table-dark">
             <th scope="col"><a class="text-white" style="text-decoration: none" asp-action="Index" asp-route-sortOrder="@ViewData["IDsort"]">ReviewID</a></th>
+            <th scope="col"><a class="text-white" style="text-decoration: none" asp-action="Index" asp-route-sortOrder="@ViewData["contentsort"]">ContentName</a></th>
             <th scope="col"><a class="text-white" style="text-decoration: none" asp-action="Index" asp-route-sortOrder="@ViewData["Namesort"]">ReviewIDReviewerName</a></th>
             <th scope="col"><a class="text-white" style="text-decoration: none" asp-action="Index" asp-route-sortOrder="@ViewData["titlesort"]">ReviewTitle</a></th>
             <th scope="col"><a class="text-white" style="text-decoration: none" asp-action="Index" asp-route-sortOrder="@ViewData["dessort"]">ReviewDescription</a></th>
@@ -19,6 +20,7 @@
         {
             <tr>
                 <th scope="row">@review.ReviewId</th>
+                <th>@review.Content.Title</th>
                 <td>@review.ReviewerName</td>
                 <td>@review.ReviewTitle</td>
                 <td>@review.ReviewDescription</td>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using project5.Models;
 
 namespace project5.Controllers
@@ -21,8 +22,11 @@ namespace project5.Controllers
             ViewData["titlesort"] = sortOrder == "titleAsc" ? "titleDsc" : "titleAsc";
 			ViewData["dessort"] = sortOrder == "desAsc" ? "desDsc" : "desAsc";
 			ViewData["ratingsort"] = sortOrder == "ratingAsc" ? "ratingDsc" : "ratingAsc";
+			ViewData["contentsort"] = sortOrder == "contentAsc" ? "contentDsc" : "contentAsc";
+           
 
-			var reviews = _context.Reviews.AsQueryable();
+			var reviews = _context.Reviews.Include(p => p.Content).AsQueryable();
+           
 
             switch (sortOrder)
             {
@@ -54,6 +58,12 @@ namespace project5.Controllers
                     reviews = reviews.OrderBy(p => p.Rating);
                     break;
                 case "ratingDsc":
+                    reviews = reviews.OrderByDescending(p => p.Rating);
+                    break;
+                case "contentAsc":
+                    reviews = reviews.OrderBy(p => p.Rating);
+                    break;
+                case "contentDsc":
                     reviews = reviews.OrderByDescending(p => p.Rating);
                     break;
             }

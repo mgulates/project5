@@ -1,6 +1,6 @@
 
 using Microsoft.AspNetCore.Mvc;
-using project5.Data;
+using Microsoft.EntityFrameworkCore;
 using project5.Models;
 
 namespace project5.Controllers
@@ -24,6 +24,18 @@ namespace project5.Controllers
 
 
             return View(content);
-}
-}
+        }
+
+        public IActionResult Details(int id)
+        {
+
+            var content = _context.Content.Include(p => p.Reviews)
+                .Include(p => p.ContentCategories)
+                .ThenInclude(p => p.Category);
+
+            return View(content.FirstOrDefault(p => p.Id == id));
+
+        }
+
+    }
 }

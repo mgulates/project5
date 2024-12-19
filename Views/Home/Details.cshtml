@@ -1,0 +1,56 @@
+﻿@model Content
+
+<div class="container">
+	<div class="row">
+		<div class="col-3">
+			<img class="img-fluid rounded" src="@Model.ImageUrl" alt="@Model.Title"/>
+			<h2>Name:@Model.Title</h2>
+			<h6>Content Type:@Model.contentType</h6>
+			<h6>
+				Categories:@foreach (var c in Model.ContentCategories)
+				{
+						@("/" +c.Category.CategoryName)
+				}
+			</h6>
+			<h6>Release Date:@Model.ReleaseDate.ToLongDateString()</h6>
+			
+
+		</div>
+
+		<div class="col-9">
+			
+			
+			<h6>Desciption:</h6>
+			<p>@Model.Description</p>
+			<div class="container">
+				@foreach (var review in Model.Reviews)
+				{
+					<div class="container bg-light border border-secondary rounded" style="margin-bottom:10px">
+						<div class="row justify-content-between" >
+							<div class="col-6">
+								<h6>Reviewer Name:@review.ReviewerName</h6>
+							</div>
+							<div class="col-2">
+								<h6>@review.Rating</h6>
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col">
+								<h6>Title: @review.ReviewTitle</h6>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<h6>Description: </h6>
+								<p>@review.ReviewDescription</p>
+							</div>
+						</div>
+					</div>
+
+				}
+			</div>
+
+		</div>
+	</div>
+</div>

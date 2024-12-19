@@ -1,9 +1,8 @@
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
-using project5.Models;
 
-namespace project5.Data
+namespace project5.Models
 {
     public class Content
     {
@@ -17,5 +16,6 @@ namespace project5.Data
         public string? ImageUrl { get; set; }
 
         public List<Review> Reviews { get; set; }
-        
-        }}
+
+    }
+}

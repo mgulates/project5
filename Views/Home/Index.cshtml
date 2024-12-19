@@ -91,7 +91,7 @@
                 @foreach (var content in Model)
                 {
                     <div class="item">
-                        <a href="/Movies/Details/@content.Id">
+                        <a asp-action="Details" asp-controller="Home" asp-route-id="@content.Id">
                             <img src="@content.ImageUrl" alt="@content.Title">
                             <h3>@content.Title</h3>
                         </a>

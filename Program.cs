@@ -1,6 +1,3 @@
-
-
-using project5.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;

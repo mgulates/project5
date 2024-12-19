@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\migrations\\20241219064344_miggg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:migrations\\20241219064344_miggg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\views\\review\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:views\\review\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\models\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:models\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\views\\review\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:views\\review\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\models\\content.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:models\\content.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|c:\\users\\mert \u00E7elebi\\source\\repos\\project5\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF3B6156-8BC3-4540-9A92-2697C038B65F}|project5.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 412,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,78 +46,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20241219064344_miggg.cs",
-              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Migrations\\20241219064344_miggg.cs",
-              "RelativeDocumentMoniker": "Migrations\\20241219064344_miggg.cs",
-              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Migrations\\20241219064344_miggg.cs",
-              "RelativeToolTip": "Migrations\\20241219064344_miggg.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T06:44:01.61Z",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Views\\Review\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Review\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Views\\Review\\Create.cshtml",
+              "RelativeToolTip": "Views\\Review\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T20:43:24.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T06:42:23.075Z",
+              "WhenOpened": "2024-12-19T19:00:26.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\Source\\Repos\\project5\\Views\\Home\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\Source\\Repos\\project5\\Views\\Home\\Details.cshtml",
+              "RelativeToolTip": "Views\\Home\\Details.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T18:52:10.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Content.cs",
+              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Content.cs",
+              "RelativeDocumentMoniker": "Models\\Content.cs",
+              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Content.cs",
+              "RelativeToolTip": "Models\\Content.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T18:41:42.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T18:37:10.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\DataContext.cs",
-              "RelativeDocumentMoniker": "Models\\DataContext.cs",
-              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\DataContext.cs",
-              "RelativeToolTip": "Models\\DataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALwAAAA6AAAAAAAAAA==",
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Models\\Review.cs",
+              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Review.cs",
+              "RelativeToolTip": "Models\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T06:20:38.442Z",
+              "WhenOpened": "2024-12-19T18:35:42.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "Models\\Account.cs",
-              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Account.cs",
-              "RelativeToolTip": "Models\\Account.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T06:19:31.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Login.cs",
-              "RelativeDocumentMoniker": "Models\\Login.cs",
-              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Models\\Login.cs",
-              "RelativeToolTip": "Models\\Login.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T06:18:52.073Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAuwFQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T06:07:07.188Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Views\\Review\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Review\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Mert \u00C7elebi\\source\\repos\\project5\\Views\\Review\\Index.cshtml",
+              "RelativeToolTip": "Views\\Review\\Index.cshtml",
+              "ViewState": "AgIAAFYAAAAAAAAAAADwv2cAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T18:35:29.929Z",
+              "EditorCaption": ""
             }
           ]
         },
