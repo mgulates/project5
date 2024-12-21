@@ -2,6 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using project5.Models;
+using System.Security.Claims;
 
 namespace project5.Controllers
 {
@@ -23,9 +24,15 @@ namespace project5.Controllers
 			ViewData["dessort"] = sortOrder == "desAsc" ? "desDsc" : "desAsc";
 			ViewData["ratingsort"] = sortOrder == "ratingAsc" ? "ratingDsc" : "ratingAsc";
 			ViewData["contentsort"] = sortOrder == "contentAsc" ? "contentDsc" : "contentAsc";
-           
 
-			var reviews = _context.Reviews.Include(p => p.Content).AsQueryable();
+			var reviews = _context.Reviews.Include(p => p.Content).Include(p => p.ReviewerName).AsQueryable();
+
+			if (User.IsInRole("user"))
+            {
+                reviews = reviews.Where(p => p.userID == User.FindFirstValue(ClaimTypes.NameIdentifier));
+            }
+
+			
            
 
             switch (sortOrder)
@@ -37,10 +44,10 @@ namespace project5.Controllers
                     reviews = reviews.OrderByDescending(p => p.ReviewId);
                     break;
                 case "nameAsc":
-                    reviews = reviews.OrderBy(p => p.ReviewerName);
+                    reviews = reviews.OrderBy(p => p.ReviewerName.UserName);
                     break;
                 case "nameDsc":
-                    reviews = reviews.OrderByDescending(p => p.ReviewerName);
+                    reviews = reviews.OrderByDescending(p => p.ReviewerName.UserName);
                     break;
                 case "desAsc":
                     reviews = reviews.OrderBy(p => p.ReviewDescription);
@@ -75,14 +82,16 @@ namespace project5.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Create()
+		public IActionResult Create(int id)
 		{
+            ViewBag.Id = id;
 			return View();
 		}
 
 		[HttpPost]
 		public async Task<IActionResult> Create(Review review)
 		{
+            review.userID = User.FindFirstValue(ClaimTypes.NameIdentifier);
 			_context.Reviews.Add(review);
 			await _context.SaveChangesAsync();
 			return RedirectToAction("Index");

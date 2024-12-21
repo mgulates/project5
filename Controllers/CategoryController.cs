@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using project5.Models;
 
 namespace project5.Controllers
 {
+	[Authorize(Roles ="admin")]
     public class CategoryController : Controller
 	{
 		private readonly DataContext _context;

@@ -25,6 +25,9 @@ namespace project5.Models
 
 
 
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole { Name = "user"},
+                new IdentityRole { Name = "admin"});
 
             modelBuilder.Entity<Content>().HasData(
     new Content {contentType="Anime", Id = 1, Title = "My Neighbor Totoro", Description = "My Neighbor Totoro is a heartwarming story about two young sisters who move to the countryside and discover magical creatures, including the lovable and giant Totoro. The film explores themes of childhood wonder, innocence, and the beauty of nature.", ReleaseDate = new DateTime(1988, 4, 16), ImageUrl = "/images/totoro.png" },
@@ -37,6 +40,7 @@ namespace project5.Models
 );
 
 
+                
 
             modelBuilder.Entity<Content>().HasData(
                 new Content
@@ -78,7 +82,7 @@ namespace project5.Models
              {
                  contentID =1,
                  ReviewId = 1,
-                 ReviewerName = "Test",
+                 userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7",
                  ReviewDescription = "Test description",
                  Rating = 5,
                  ReviewTitle = "Test title",
@@ -89,7 +93,7 @@ namespace project5.Models
 
                  contentID=1,
                  ReviewId = 2,
-                 ReviewerName = "Test1",
+                 userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7",
                  ReviewDescription = "Test description1",
                  Rating = 4,
                  ReviewTitle = "Test title1",
@@ -99,7 +103,7 @@ namespace project5.Models
              {
                  contentID = 1,
                  ReviewId = 3,
-                 ReviewerName = "Test2",
+                 userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7",
                  ReviewDescription = "Test description2",
                  Rating = 3,
                  ReviewTitle = "Test title2",
@@ -108,7 +112,7 @@ namespace project5.Models
              {
                  contentID = 1,    
                  ReviewId = 4,
-                 ReviewerName = "Test3",
+                 userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7",
                  ReviewDescription = "Test description3",
                  Rating = 2,
                  ReviewTitle = "Test title3",

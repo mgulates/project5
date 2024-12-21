@@ -1,16 +1,9 @@
 ﻿@model Review
 
 <form asp-controller="Review" asp-action="Create" method="post">
+    <input type="hidden" asp-for="contentID" value="@ViewBag.id" />
     <table class="table">
         <tbody>
-            <tr>
-                <td>
-                    <label asp-for="ReviewerName">Reviewer Name</label>
-                </td>
-                <td>
-					<input asp-for="ReviewerName" class="form-control" placeholder="Enter Name" />
-                </td>
-            </tr>
             <tr>
                 <td>
                     <label asp-for="ReviewTitle">Review Title</label>
@@ -37,7 +30,7 @@
                 </td>
             </tr>
 
-
+            
         </tbody>
 
 

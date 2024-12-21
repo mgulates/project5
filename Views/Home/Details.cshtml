@@ -28,7 +28,7 @@
 					<div class="container bg-light border border-secondary rounded" style="margin-bottom:10px">
 						<div class="row justify-content-between" >
 							<div class="col-6">
-								<h6>Reviewer Name:@review.ReviewerName</h6>
+								<h6>Reviewer Name:@review.ReviewerName.UserName</h6>
 							</div>
 							<div class="col-2">
 								<h6>@review.Rating</h6>
@@ -49,6 +49,13 @@
 					</div>
 
 				}
+				@if(User.Identity.IsAuthenticated)
+				{
+					if(User.IsInRole("user"))
+					{
+						<a asp-action="Create" asp-controller="Review" asp-route-id="@Model.Id"><button class="btn btn-primary">Create Review</button></a>
+					}
+				}	
 			</div>
 
 		</div>

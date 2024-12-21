@@ -29,7 +29,7 @@ namespace project5.Controllers
         public IActionResult Details(int id)
         {
 
-            var content = _context.Content.Include(p => p.Reviews)
+            var content = _context.Content.Include(p => p.Reviews).ThenInclude(p => p.ReviewerName)
                 .Include(p => p.ContentCategories)
                 .ThenInclude(p => p.Category);
 

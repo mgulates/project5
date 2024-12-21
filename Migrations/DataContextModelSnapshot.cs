@@ -41,6 +41,18 @@ namespace project5.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "18599e66-ebce-42fc-89d9-38790c0249fa",
+                            Name = "user"
+                        },
+                        new
+                        {
+                            Id = "2bec0e24-4da9-4563-804d-855c933dfdcc",
+                            Name = "admin"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -920,16 +932,17 @@ namespace project5.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ReviewerName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("contentID")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("userID")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("ReviewId");
 
                     b.HasIndex("contentID");
+
+                    b.HasIndex("userID");
 
                     b.ToTable("Reviews");
 
@@ -940,8 +953,8 @@ namespace project5.Migrations
                             Rating = 5,
                             ReviewDescription = "Test description",
                             ReviewTitle = "Test title",
-                            ReviewerName = "Test",
-                            contentID = 1
+                            contentID = 1,
+                            userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7"
                         },
                         new
                         {
@@ -949,8 +962,8 @@ namespace project5.Migrations
                             Rating = 4,
                             ReviewDescription = "Test description1",
                             ReviewTitle = "Test title1",
-                            ReviewerName = "Test1",
-                            contentID = 1
+                            contentID = 1,
+                            userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7"
                         },
                         new
                         {
@@ -958,8 +971,8 @@ namespace project5.Migrations
                             Rating = 3,
                             ReviewDescription = "Test description2",
                             ReviewTitle = "Test title2",
-                            ReviewerName = "Test2",
-                            contentID = 1
+                            contentID = 1,
+                            userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7"
                         },
                         new
                         {
@@ -967,8 +980,8 @@ namespace project5.Migrations
                             Rating = 2,
                             ReviewDescription = "Test description3",
                             ReviewTitle = "Test title3",
-                            ReviewerName = "Test3",
-                            contentID = 1
+                            contentID = 1,
+                            userID = "628d9b3b-722c-49c0-9c73-888fcc1f86e7"
                         });
                 });
 
@@ -1050,7 +1063,13 @@ namespace project5.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "ReviewerName")
+                        .WithMany()
+                        .HasForeignKey("userID");
+
                     b.Navigation("Content");
+
+                    b.Navigation("ReviewerName");
                 });
 
             modelBuilder.Entity("project5.Models.Category", b =>

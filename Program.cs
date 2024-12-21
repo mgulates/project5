@@ -48,4 +48,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{filter=all}");
 
+SeedAdmin.EnsurePopulated(app);
+
 app.Run();

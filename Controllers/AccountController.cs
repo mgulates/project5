@@ -17,15 +17,16 @@ namespace project5.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login(string? returnUrl)
         {
+            ViewData["returnUrl"] = returnUrl;
             return View();
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> LogIn(LogIn model)
+        public async Task<IActionResult> LogIn(LogIn model,string? returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -35,7 +36,7 @@ namespace project5.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("Index", "Home");
+                        return Redirect(returnUrl);
                     }
                 }
 
@@ -59,6 +60,7 @@ namespace project5.Controllers
 
                 if (result.Succeeded)
                 {
+                    _userManager.AddToRoleAsync(user, "user");
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     TempData["SignUpSuccess"] = "Account created successfully. Please log in.";
                     return RedirectToAction("LogIn", "Account");
