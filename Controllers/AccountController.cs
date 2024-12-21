@@ -36,7 +36,7 @@ namespace project5.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, lockoutOnFailure: false);
                     if (result.Succeeded)
                     {
-                        return Redirect(returnUrl);
+                        return Redirect(returnUrl ?? "/");
                     }
                 }
 
